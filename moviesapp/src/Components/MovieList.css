@@ -1,0 +1,56 @@
+.container {
+    text-align: center;
+}
+
+.container1 ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 50px;
+}
+
+.container1 li {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+    width: 300px;
+    background-color: #fff;
+    /* Fond blanc pour les cartes */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    /* Ajout d'une transition au survol */
+
+
+}
+
+
+
+.image {
+    max-width: 100%;
+    padding-left: 10px;
+    height: 300px;
+    padding-right: 10px;
+    /* Ajustement de la hauteur
+  
+  
+  h2 {
+    font-size: 1.5em; /* Taille du titre augmentée */
+    margin: 10px 0;
+    color: #333;
+}
+
+p {
+    margin: 5px 0;
+    color: #777;
+}
+
+.container1 li:hover h2 {
+    color: #00ffe1;
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: underline;
+
+}
+
