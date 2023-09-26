@@ -1,11 +1,12 @@
-[
+  const moviesData=[
     {
       "id": 1,
       "title":"One Piece" ,
       "genre": "adventure,action",
       "year": 2023,
       "rating":4.2 ,
-      "image": "One piece.webp"
+      "image": "One piece.webp",
+      
     },
     {
       "id": 2,
@@ -31,5 +32,5 @@
       "rating":6 ,
       "image":"Hellbound.jpg" 
     }
-  ]
-  
+  ];
+export default moviesData;

@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import {Link} from 'react-router-dom'
 import SearchBar from './SearchBar';
-import moviesData from '../Data/moviesData.json';
+import moviesData from '../Data/moviesData';
 import './MovieList.css'; 
+
 function MovieList() {
   const [searchResults, setSearchResults] = useState([]);
 
@@ -9,7 +11,6 @@ function MovieList() {
     const filteredMovies = moviesData.filter(movie =>
       movie.title.toLowerCase().includes(query.toLowerCase())
     );
-
     setSearchResults(filteredMovies);
   }
 
@@ -23,15 +24,17 @@ function MovieList() {
       </div>
       <div className='container1'>
         <ul>
-          {searchResults.map(movie => (
-            <li key={movie.id} className='movie-card'>
-              <img className='image' src={movie.image} alt={movie.title} />
-              <h2>{movie.title}</h2>
-              <p>Genre : {movie.genre}</p>
-              <p>Année : {movie.year}</p>
-              <p>Évaluation : {movie.rating}</p>
-            </li>
-          ))}
+        {moviesData.map(movie => (
+  <li key={movie.id} className='movie-card'>
+    <Link to={`/trailer/${movie.id}`}>
+      <img className='image' src={movie.image} alt={movie.title} />
+    </Link>
+    <h2>{movie.title}</h2>
+    <p>Genre : {movie.genre}</p>
+    <p>Année : {movie.year}</p>
+    <p>Évaluation : {movie.rating}</p>
+  </li>
+))}    
         </ul>
       </div>
       
